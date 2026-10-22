@@ -355,7 +355,7 @@ const sigOf=o=>{if(!o)return 'null';const c=Object.assign({},o);delete c.u;delet
 const toast=m=>{const e=$('#t');e.textContent=m;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2800)};
 
 /* ---------- server (Google Apps Script web app that runs as the owner) ---------- */
-const APP_CONFIG={SERVER:'',GOOGLE_CLIENT_ID:''};   /* <- fill in these two values, see README-GITHUB.txt */
+const APP_CONFIG={SERVER:'',https://script.google.com/macros/s/AKfycbxKB09B6QGqxyNcD2znz9OjOTNoLufJR0-iWypEmg5u9hYYIqnmfMDR-YzNDyKcdy_1/exec:''};   /* <- fill in these two values, see README-GITHUB.txt */
 async function api(action,data){
  if(!APP_CONFIG.SERVER)throw new Error('Server address is missing in index.html');
  const body=JSON.stringify(Object.assign({action:action,token:SES&&SES.token},data||{}));
